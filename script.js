@@ -312,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // --- Gemini API Call ---
     const callGeminiAPI = async (profile) => {
-        const apiKey = "AIzaSyBYHYioHVQRnbAFb4-R-cbDl8qR4wZCZCk"; // IMPORTANT: Replace with your actual API Key
+        const apiKey = "PASTE_YOUR_API_KEY_HERE"; // IMPORTANT: Replace with your actual API Key
 
         if (apiKey === "PASTE_YOUR_API_KEY_HERE" || !apiKey) {
            throw new Error("API Key is missing. Please add your Google AI Studio API key to the script.");
@@ -399,3 +399,4 @@ Start the entire response with an overall introductory summary paragraph: <p cla
     updateFormView();
     showPage(formPage);
 });
+
