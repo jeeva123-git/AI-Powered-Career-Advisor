@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Advisor | Chart Your Future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-slate-300">
+    <canvas id="three-bg"></canvas>
+
+    <div id="app" class="max-w-7xl mx-auto px-4 py-8 sm:py-12 relative z-10">
+
+        <!-- Hero Section -->
+        <header class="text-center min-h-[80vh] flex flex-col justify-center items-center fade-in-up">
+            <div class="inline-block bg-white/10 p-4 rounded-2xl shadow-sm mb-6 backdrop-blur-md">
+                 <i data-lucide="rocket" class="w-12 h-12 text-indigo-400"></i>
+            </div>
+            <h1 class="text-5xl sm:text-7xl font-black text-white tracking-tight leading-tight">Your Career Co-Pilot. <br/> Powered by AI.</h1>
+            <p class="mt-6 text-lg text-slate-400 max-w-3xl mx-auto">Go beyond static advice. Our intelligent platform offers predictive insights, dynamic learning journeys, and real-world simulations to prepare you for tomorrow's job market.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
+                <a href="#interactive-tool" id="build-blueprint-btn" class="gradient-btn text-white font-bold py-4 px-10 rounded-full text-lg">
+                    Build My Blueprint
+                </a>
+            </div>
+        </header>
+        
+        <!-- NEW: Key Features Section -->
+        <section class="py-24 fade-in-up" style="animation-delay: 0.2s;">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">A Complete Career Development Toolkit</h2>
+                <p class="mt-4 text-lg text-slate-400 max-w-3xl mx-auto">Everything you need to assess your skills, explore paths, and prepare for success, all in one intelligent platform.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card feature-card p-8">
+                    <div class="inline-block bg-white/10 p-3 rounded-full mb-4"><i data-lucide="clipboard-check" class="w-8 h-8 text-indigo-400"></i></div>
+                    <h3 class="text-xl font-bold text-white">Skill Assessment Module</h3>
+                    <p class="text-slate-400 mt-2 text-sm">AI-driven analysis of your narrative highlights your strengths and identifies areas for growth.</p>
+                </div>
+                <div class="card feature-card p-8">
+                     <div class="inline-block bg-white/10 p-3 rounded-full mb-4"><i data-lucide="map" class="w-8 h-8 text-indigo-400"></i></div>
+                    <h3 class="text-xl font-bold text-white">Career Path Recommendation</h3>
+                    <p class="text-slate-400 mt-2 text-sm">Get multiple, diverse career options tailored to your unique profile and aspirations.</p>
+                </div>
+                <div class="card feature-card p-8">
+                     <div class="inline-block bg-white/10 p-3 rounded-full mb-4"><i data-lucide="list-checks" class="w-8 h-8 text-indigo-400"></i></div>
+                    <h3 class="text-xl font-bold text-white">Personalized Learning Roadmap</h3>
+                    <p class="text-slate-400 mt-2 text-sm">Receive a step-by-step visual guide with recommended skills, projects, and certifications.</p>
+                </div>
+                <div class="card feature-card p-8">
+                     <div class="inline-block bg-white/10 p-3 rounded-full mb-4"><i data-lucide="trending-up" class="w-8 h-8 text-indigo-400"></i></div>
+                    <h3 class="text-xl font-bold text-white">Skill Growth Tracker</h3>
+                    <p class="text-slate-400 mt-2 text-sm">Your blueprint includes key milestones to track your progress as you complete courses and projects.</p>
+                </div>
+                <div class="card feature-card p-8">
+                     <div class="inline-block bg-white/10 p-3 rounded-full mb-4"><i data-lucide="file-text" class="w-8 h-8 text-indigo-400"></i></div>
+                    <h3 class="text-xl font-bold text-white">Mock Interviews & Resume Builder</h3>
+                    <p class="text-slate-400 mt-2 text-sm">Practice with AI-generated interview questions and get optimized keywords for your resume.</p>
+                </div>
+                <div class="card feature-card p-8">
+                     <div class="inline-block bg-white/10 p-3 rounded-full mb-4"><i data-lucide="users" class="w-8 h-8 text-indigo-400"></i></div>
+                    <h3 class="text-xl font-bold text-white">Mentorship & Community</h3>
+                    <p class="text-slate-400 mt-2 text-sm">Get actionable advice on who to connect with and what to discuss to build your professional network.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Testimonials / Success Stories -->
+        <section class="py-24 fade-in-up" style="animation-delay: 0.6s;">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">From Our Community</h2>
+                <p class="mt-4 text-lg text-slate-400 max-w-2xl mx-auto">Real stories from ambitious individuals who transformed their careers with us.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                 <div class="card p-8">
+                     <p class="text-slate-300 text-lg italic mb-6">"The skill assessment was spot on. It identified a strength in creative problem-solving I hadn't considered, which led me to my current role in product innovation."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://placehold.co/60x60/1e293b/a5b4fc?text=RV" alt="User Avatar" class="w-14 h-14 rounded-full object-cover">
+                        <div>
+                            <p class="font-bold text-white">Rohan Verma</p>
+                            <p class="text-sm text-indigo-400">Product Innovator at InnoCloud</p>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="card p-8">
+                    <p class="text-slate-300 text-lg italic mb-6">"The mock interview simulation and resume keywords were invaluable. I felt completely prepared and knew exactly how to present my skills to recruiters."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://placehold.co/60x60/1e293b/c4b5fd?text=AK" alt="User Avatar" class="w-14 h-14 rounded-full object-cover">
+                        <div>
+                            <p class="font-bold text-white">Ananya Kapoor</p>
+                            <p class="text-sm text-indigo-400">UX Designer at PixelPerfect</p>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Interactive Tool / Call-to-Action Section -->
+        <main id="interactive-tool" class="py-24 fade-in-up" style="animation-delay: 0.8s;">
+             <div class="text-center mb-10">
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">Create Your Personalized Blueprint</h2>
+                <p class="mt-4 text-lg text-slate-400 max-w-2xl mx-auto">Answer a few narrative-based questions to generate a clear, strategic, and adaptive plan for your future.</p>
+            </div>
+
+            <div id="main-content" class="card p-6 sm:p-10 transition-all duration-500">
+                <section id="form-page">
+                     <div class="w-full bg-white/10 rounded-full h-2.5 mb-8">
+                        <div id="progress-bar" class="bg-indigo-500 h-2.5 rounded-full" style="width: 25%; transition: width 0.5s ease;"></div>
+                    </div>
+                    <form id="career-form">
+                        <div id="step-1" class="form-section active fade-in-up">
+                            <h3 class="text-2xl font-bold mb-6 text-white flex items-center"><i data-lucide="book-user" class="w-7 h-7 mr-4 text-indigo-400"></i>Your Story & Background</h3>
+                            <div class="space-y-6">
+                                <div>
+                                    <label for="studies" class="block text-sm font-medium text-slate-300 mb-2">Describe your field of study and what subjects genuinely excite you.</label>
+                                    <textarea id="studies" name="studies" rows="4" class="w-full p-4 rounded-xl focus:ring-2 focus:ring-indigo-500 input-field" placeholder="e.g., 'I'm in Computer Science, and I'm fascinated by how algorithms can solve real-world problems, especially in AI...'"></textarea>
+                                </div>
+                                 <div>
+                                    <label for="projects" class="block text-sm font-medium text-slate-300 mb-2">Tell us about a project or accomplishment you're proud of (academic or personal).</label>
+                                    <textarea id="projects" name="projects" rows="4" class="w-full p-4 rounded-xl focus:ring-2 focus:ring-indigo-500 input-field" placeholder="e.g., 'I built a small web app to track my expenses. It taught me a lot about Python and problem-solving...'"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                         <div id="step-2" class="form-section fade-in-up">
+                            <h3 class="text-2xl font-bold mb-6 text-white flex items-center"><i data-lucide="sparkles" class="w-7 h-7 mr-4 text-indigo-400"></i>Passions & Work Style</h3>
+                             <label for="passions" class="block text-sm font-medium text-slate-300 mb-2">Beyond academics, what are you passionate about? What problems do you want to solve?</label>
+                            <textarea id="passions" name="passions" rows="5" class="w-full p-4 rounded-xl focus:ring-2 focus:ring-indigo-500 input-field" placeholder="e.g., 'I'm passionate about sustainability and want to use my tech skills to make a positive impact. I also love creative writing...'"></textarea>
+                             <label for="workstyle" class="block text-sm font-medium text-slate-300 mb-2 mt-4">Describe your ideal work environment. Do you prefer collaborating in a team or working independently?</label>
+                            <textarea id="workstyle" name="workstyle" rows="3" class="w-full p-4 rounded-xl focus:ring-2 focus:ring-indigo-500 input-field" placeholder="e.g., 'I thrive in a fast-paced, collaborative team where I can bounce ideas off others...'"></textarea>
+                        </div>
+                        <div id="step-3" class="form-section fade-in-up">
+                            <h3 class="text-2xl font-bold mb-6 text-white flex items-center"><i data-lucide="flag" class="w-7 h-7 mr-4 text-indigo-400"></i>Long-Term Aspirations</h3>
+                             <label for="aspirations" class="block text-sm font-medium text-slate-300 mb-2">Looking 5-10 years ahead, what does 'success' look like to you?</label>
+                            <textarea id="aspirations" name="aspirations" rows="6" class="w-full p-4 rounded-xl focus:ring-2 focus:ring-indigo-500 input-field" placeholder="e.g., 'I want to be leading a product team at a top tech company, or perhaps have started my own venture in the ed-tech space...'"></textarea>
+                        </div>
+                    </form>
+                    <div class="mt-10 flex justify-between items-center">
+                        <button id="prev-btn" class="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-6 rounded-full transition-colors invisible">Back</button>
+                        <button id="next-btn" class="gradient-btn text-white font-bold py-3 px-8 rounded-full">Next</button>
+                        <button id="submit-btn" class="hidden gradient-btn text-white font-bold py-3 px-8 rounded-full">Generate My Blueprint</button>
+                    </div>
+                </section>
+                
+                <section id="loading-page" class="hidden text-center py-20">
+                     <div class="flex justify-center items-center mb-6"><div class="loader"></div></div>
+                    <h2 class="text-2xl font-semibold text-white">Architecting Your Future...</h2>
+                    <p class="text-slate-400 mt-2">Our AI is running predictive models and simulations to build your strategic blueprint.</p>
+                </section>
+                
+                <section id="results-page" class="hidden">
+                    <div class="text-center mb-10"><h2 class="text-3xl sm:text-4xl font-extrabold text-white">Your Personalized Career Blueprint</h2></div>
+                    <div id="results-content" class="space-y-8"></div>
+                     <div id="error-message" class="hidden mt-8 p-5 bg-red-500/10 border border-red-500/30 text-red-300 rounded-lg">
+                        <div class="flex"><div class="py-1"><i data-lucide="alert-triangle" class="w-6 h-6 text-red-400 mr-4"></i></div>
+                            <div><p class="font-bold">Oops! Something went wrong.</p><p id="error-text" class="text-sm"></p></div>
+                        </div>
+                    </div>
+                     <div class="text-center mt-12">
+                         <button id="start-over-btn" class="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-8 rounded-full transition-colors">Start Over</button>
+                     </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="text-center mt-24 text-slate-500">
+            <p>&copy; 2025 Career Advisor AI. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Modals -->
+    <div id="ai-roadmap-modal-backdrop" class="modal-backdrop"></div>
+    <div id="ai-roadmap-modal" class="modal w-11/12 max-w-6xl">
+        <div class="card p-6 sm:p-8">
+            <h2 id="ai-roadmap-title" class="text-3xl font-bold text-white mb-6 text-center"></h2>
+            <div id="ai-roadmap-content-container" class="ai-roadmap-scroll-wrapper">
+                <!-- AI Generated Isometric Roadmap will be injected here -->
+            </div>
+            <div class="text-center mt-6">
+                <button id="ai-roadmap-modal-close-btn" class="gradient-btn text-white font-bold py-3 px-8 rounded-full">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="resume-modal-backdrop" class="modal-backdrop"></div>
+    <div id="resume-modal" class="modal w-11/12 max-w-4xl">
+        <div class="resume-container">
+            <div id="resume-content"></div>
+             <div class="text-center mt-8">
+                <button id="resume-modal-close-btn" class="gradient-btn text-white font-bold py-3 px-8 rounded-full">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mock-interview-modal-backdrop" class="modal-backdrop"></div>
+    <div id="mock-interview-modal" class="modal w-11/12 max-w-2xl">
+        <div class="card p-8">
+             <h2 id="mock-interview-title" class="text-2xl font-bold text-white mb-6 text-center"></h2>
+             <div id="mock-interview-content" class="text-center"></div>
+             <div class="text-center mt-8">
+                <button id="mock-interview-modal-close-btn" class="gradient-btn text-white font-bold py-3 px-8 rounded-full">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
